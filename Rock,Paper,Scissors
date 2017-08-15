@@ -10,7 +10,7 @@ while True:
     except:
         print("\nPlease pick a valid number!")
         rounds = input()
-print("Alrighty, we'll do", rounds,"rounds.\n")
+print("Alrighty, we'll do {} rounds.\n".format(rounds))
 for round in range(rounds):
     #Your choice input
     your_choice = (input("Round {}! Pick Rock, Paper, or Scissors:\n".format(round + 1))).lower()
