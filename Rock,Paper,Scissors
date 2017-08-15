@@ -1,4 +1,3 @@
-#This is a Rock,Paper, Scissors Game
 import random
 rock = "rock"
 paper = "paper"
@@ -17,16 +16,12 @@ while True:
 print("Alrighty, we'll do", rounds,"rounds.\n")
 for round in range(rounds):
     #Your choice input
-    your_choice = input("Round {}! Pick Rock, Paper, or Scissors:\n".format(round + 1))
+    your_choice = (input("Round {}! Pick Rock, Paper, or Scissors:\n".format(round + 1))).lower()
     while True:
-        if your_choice.lower() == "rock":
-            your_choice = rock
-            break
-        elif your_choice.lower() == "paper" :
-            your_choice = paper
-            break
-        elif your_choice.lower() == "scissors" :
-            your_choice = scissors
+        if (
+            your_choice == "rock" or
+            your_choice == "paper" or
+            your_choice == "scissors"):
             break
         else:
             print("Error: Please pick Rock, Paper, or Scissors")
